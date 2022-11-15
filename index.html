@@ -8,56 +8,69 @@
     <title> Shinobite Calculate </title>
     
   </head>
-  <style>
-  
-body {
-  @import url ('https://fonts.googleapis.com/css2?family=Roboto+Condensed');
-  font-family: 'Roboto Condensed', sans-serif;
-  background: url(https://wallpaperaccess.com/full/630517.jpg) no-repeat;
-  
-
-  background-position: auto;
-}
-head {
-  text-align: center;
-  background-color: rgb(250, 210, 173, 0.5);
-  padding: auto;
-  font-size: 50px;
-  font-weight: 500;
-}
-button{
-  background-color: blue;
-  color: aliceblue;
-}
-table,tr,th {
-  border: 1px solid black;
-  /*border-radius: 5px;*/
-  background-color: azure;
-  border-collapse: collapse;
-  table-layout: auto;
-  
-
-}
-tr,th {
-  padding: 10px;
-}
-  </style>
   <body>
     <div class="head">
         <h1>Welcome to Shinobite Calculate </h1>
     </div >
-    <div class="button">
-        <button type="button">
-            Calculate
-        </button>
+    
+    <div class="board">
+    <button onclick ="document.getElementById('id01').style.display='block'" "style="width: auto;" >Add</button>
+    <div id="id01" class="modal">
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          
+        </div>
+    
+        <div class="container">
+          <label for="birthday">date</label><br>
+          <input type="date" id="meeting-time"
+       name="meeting-time" ><br> 
+
+          <label for="uname"><b>Mission</b></label>
+          
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+            </div>
+          </div>
+          
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <button type="submit">Save</button>
+          
+        </div>
+    
+        
+      </form>
     </div>
+ 
+    <button class="btn edit">Edit</button>
+    <button class="btn del">Delete</button>
+
+
     <table>
-      <tr>
-        <th>DD/MMM/YYYY</th>
-        <th>Mission</th>
-        <th>Shinobite</th>
+      <tr class="headtable">
+        <th class="date">DD/MMM/YYYY</th>
+        <th class="mission">Mission</th>
+        <th class="shinobite">Shinobite</th>
+        <th class="all">All Shinobite</th>
+      </tr>
+
+      <tr class="maintable">
+        <th>28/10/2565</th>
+        <th></th>
+        <th></th>
         <th></th>
       </tr>
     </table>
+    
+   </div>
   </body>
 </html>
